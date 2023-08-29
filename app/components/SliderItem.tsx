@@ -11,8 +11,7 @@ const SliderItem: React.FC<SliderItemProps> = ({ image }) => {
         src={image}
         alt="image-before"
         fill
-        objectFit="contain"
-        objectPosition="top"
+        className="object-contain object-top"
       />
       <div className="absolute w-8 h-full bg-white left-1/2 -translate-x-[50%]"></div>
       <div className="absolute top-0 left-0 w-40 bg-white/90 py-3 flex items-center justify-center uppercase text-2xl">

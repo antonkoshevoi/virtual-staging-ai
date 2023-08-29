@@ -14,10 +14,20 @@ const ResultsItem: React.FC<ResultsItemProps> = ({ item }) => {
   return (
     <div className="flex items-center justify-around border border-black py-2 rounded-xl drop-shadow-md shadow-xl relative group hover:bg-black/20 transition-all">
       <div className="w-72 h-48 relative rounded-md overflow-hidden ">
-        <Image src={item.images[0]} fill alt="before-image" objectFit="cover" />
+        <Image
+          src={item.images[0]}
+          fill
+          alt="before-image"
+          className="object-cover"
+        />
       </div>
       <div className="w-72 h-48 relative  rounded-md overflow-hidden">
-        <Image src={item.images[1]} fill alt="before-image" objectFit="cover" />
+        <Image
+          src={item.images[1]}
+          fill
+          alt="before-image"
+          className="object-cover"
+        />
       </div>
       <button
         onClick={() => {

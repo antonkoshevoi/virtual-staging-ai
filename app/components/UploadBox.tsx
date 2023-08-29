@@ -74,8 +74,7 @@ const UploadBox = () => {
               src={originalImage}
               alt="before-image"
               fill
-              objectFit="contain"
-              objectPosition="top"
+              className="object-contain object-top"
             />
             <span className="absolute top-0 left-1/2 -translate-x-[50%] p-3 text-2xl bg-white/80 uppercase">
               before
@@ -88,8 +87,7 @@ const UploadBox = () => {
               src={editedImageUrl}
               alt="after-image"
               fill
-              objectFit="contain"
-              objectPosition="top"
+              className="object-contain object-top"
             />
             <span className="absolute top-0 left-1/2 -translate-x-[50%] p-3 text-2xl bg-white/80 uppercase">
               after

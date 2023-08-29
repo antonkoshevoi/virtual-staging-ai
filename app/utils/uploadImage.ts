@@ -11,7 +11,7 @@ const uploadImage = (file: File, setURL: (url: string) => void) => {
     "state_changed",
     (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      progress === 100 && toast.success(`Progress is ${progress}%`);
+      progress === 100 && toast.success(`Image loaded`);
       switch (snapshot.state) {
         case "paused":
           break;
