@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import { AiOutlineDelete } from "react-icons/ai";
-import { deleteFromLocalStorage } from "../utils/localStorage";
+import { deleteFromLocalStorage } from "@/app/utils/localStorage";
 
 interface ResultsItemProps {
   item: { id: string; images: string[] };
