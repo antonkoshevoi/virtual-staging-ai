@@ -1,4 +1,4 @@
-import Slider from "./components/Slider";
+import Slider from "./components/slider/Slider";
 import TryButton from "./components/TryButton";
 
 export default function Home() {

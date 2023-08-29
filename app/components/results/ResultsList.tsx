@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 
 import ResultsItem from "./ResultsItem";
-import Container from "./layout/Container";
+import Container from "../layout/Container";
 
-import { getFromLocalStorage } from "../utils/localStorage";
+import { getFromLocalStorage } from "../../utils/localStorage";
 
 const ResultsList = () => {
   const [images, setImages] = useState<{ images: string[]; id: string }[]>([]);
