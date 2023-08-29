@@ -1,11 +1,13 @@
 import { replicate } from "@/app/libs/replicate";
 
 import { NextResponse } from "next/server";
+export const runtime = "edge";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { image } = body;
+
     if (!image) {
       return new NextResponse("Wrong data", { status: 400 });
     }
@@ -18,8 +20,10 @@ export async function POST(req: Request) {
         },
       }
     );
+
     return NextResponse.json(output);
   } catch (error) {
+    console.log(error);
     return new NextResponse("Internal error", { status: 500 });
   }
 }
