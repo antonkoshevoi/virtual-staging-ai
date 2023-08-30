@@ -41,6 +41,7 @@ const UploadBox = () => {
     setLoading(true);
     const file = e.target.files?.[0];
     if (file) {
+      setEditedImageUrl("");
       uploadImage(file, setOriginalImage);
     }
     setLoading(false);

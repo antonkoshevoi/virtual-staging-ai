@@ -5,8 +5,13 @@ import ResultsItem from "./ResultsItem";
 import Container from "../layout/Container";
 import { getFromLocalStorage } from "@/app/utils/localStorage";
 
+export type ImageType = {
+  images: string[];
+  id: string;
+};
+
 const ResultsList = () => {
-  const [images, setImages] = useState<{ images: string[]; id: string }[]>([]);
+  const [images, setImages] = useState<ImageType[]>([]);
 
   useEffect(() => {
     const localImages = getFromLocalStorage();
@@ -22,7 +27,7 @@ const ResultsList = () => {
     <Container>
       <div className=" columns-2 space-y-4">
         {images.map((item) => (
-          <ResultsItem key={item.id} item={item} />
+          <ResultsItem key={item.id} item={item} setImages={setImages} />
         ))}
       </div>
     </Container>
